@@ -1,5 +1,5 @@
 # app.py
-# Created by S. Hück on 02.09.2022
+# Created by S. Hück on 13.10.2022
 
 import logging
 import ntpath
@@ -29,13 +29,16 @@ def main():
 
     
     input_root_dir = os.getcwd() + '/reports_in/'
+    
+    ### Provide input file name ###
     #input_file_name = 'Fidor mantrafant Kontoumsätze 2018.csv'
     #input_file_name = 'Fidor mantrafant Kontoumsätze 2019.csv'
     #input_file_name = 'Fidor mantrafant Kontoumsätze 2020.csv'
     input_file_name = 'Fidor mantrafant Kontoumsätze 01-10 2021.csv'
-
+    
     input_file_abs_path = input_root_dir + input_file_name
-    print()
+    
+    print() # new line spacing
     logging.info(f'Reading {input_file_name} was successful.')
 
     df = pd.read_csv(input_file_abs_path,
